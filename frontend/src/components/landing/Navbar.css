@@ -1,0 +1,131 @@
+/* Navbar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+/* Dynamic Scroll State */
+.navbar--transparent {
+  background-color: transparent;
+}
+
+.navbar--scrolled {
+  background-color: rgba(3, 7, 18, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.navbar__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+}
+
+/* Logo Section */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar__logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(to bottom right, #22c5ee, #33cfea);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__logo-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Desktop Navigation */
+.navbar__menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar__link {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar__link:hover {
+  color: white;
+}
+
+/* Buttons */
+.navbar__btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.navbar__btn--desktop {
+  background-color: #1e293b;
+  color: white;
+  border: 1px solid #334155;
+}
+
+.navbar__btn--desktop:hover {
+  background-color: #334155;
+}
+
+/* Mobile Toggle */
+.navbar__mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+/* Mobile Menu Dropdown */
+.mobile-menu {
+  background-color: #0f172a;
+  border-bottom: 1px solid #1e293b;
+  overflow: hidden;
+}
+
+.mobile-menu__content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar__menu, 
+  .navbar__cta-desktop {
+    display: none;
+  }
+
+  .navbar__mobile-toggle {
+    display: block;
+  }
+}
